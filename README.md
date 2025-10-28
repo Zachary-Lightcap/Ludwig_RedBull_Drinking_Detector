@@ -1,11 +1,11 @@
 # Ludwig_RedBull_Drinking_Detector
-Program and fine-tuned Convolutional Neural Network to detect when Ludwig drinks a Red Bull on stream.
+Fine-tuned a Convolutional Neural Network to detect when Ludwig drinks a Red Bull on stream and automatically save the clips.
 
 ## Currently
 Bare-bones proof of concept where videos have to be manually uploaded, and clips have to be downloaded by hand.
 Code currently runs in Google Colab to utilize GPUs for model training and CPU for the rest of the running.
 Many clips generated -- a lot of false positives.
-Most of the data comes from the YOLO model itself to detect a person, and a further fine-tuned YOLO model to detect the cans.
+Most of the data comes from the YOLO (You Only Look Once) model itself to detect a person, which adds in synthetic Red Bull can data to fine-tune the model.
 
 ## How to Run
 Download files and upload to Google Colab
