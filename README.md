@@ -2,20 +2,19 @@
 Fine-tuned a Convolutional Neural Network to detect when Ludwig drinks a Red Bull on stream and automatically save the clips.
 
 ## Currently
-Bare-bones proof of concept where videos have to be manually uploaded, and clips have to be downloaded by hand.
-Code currently runs in Google Colab to utilize GPUs for model training and CPU for the rest of the running.
-Many clips generated -- a lot of false positives.
+Early model version fine-tuned on a small labeled dataset where videos have to be manually uploaded, and clips have to be downloaded by hand.
+Training of the model was run in Google Colab to utilize GPUs; the rest of the notebook has been updated to run on a local machine.
+Some results are included, as well as an example of some clips pulled from a single full video uploaded. Ne
 Most of the data comes from the YOLO (You Only Look Once) model itself to detect a person, which adds in synthetic Red Bull can data to fine-tune the model.
 
 ## How to Run
-Download files and upload to Google Colab
-Run important Cells for either further training, dataset tuning, or running the model.
-If you want to use your own data pulls, insert your own API key.
+Download the notebook and best_weights.pt and run it on either Google Colab or a local machine. If running on a local machine, note that dependencies must be downloaded.
+Run important Cells for either further training, dataset tuning, or running the model. However, a dataset would need to be manually provided to further tune.
 
 ## Future work 
-- [ ] Gather Ludwig drinking Red Bull Dataset
-- [ ] Label the data manually and create bounding boxes
+- [x] Gather Ludwig drinking Red Bull Dataset
+- [x] Label the data manually and create bounding boxes
 - [ ] Improve object detection through background frame blurring and other methodologies
-- [ ] Change from a 2-model solution to a singular YOLO model solution
-- [ ] Simplify the process of uploading videos and gathering clips.
+- [x] Change from a 2-model solution to a singular YOLO model solution
+- [ ] Simplify the process of uploading videos and gathering clips (potentially creating a website).
 - [ ] Tune clip sizes.
